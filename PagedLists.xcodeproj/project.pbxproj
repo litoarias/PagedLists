@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9BFC1187249270E800AECF6C /* PagedLists.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BFC1185249270E800AECF6C /* PagedLists.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9BFC1191249273CE00AECF6C /* PagedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC118F249273CE00AECF6C /* PagedCollectionView.swift */; };
 		9BFC1192249273CE00AECF6C /* PagedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC1190249273CE00AECF6C /* PagedTableView.swift */; };
 /* End PBXBuildFile section */
 
@@ -16,7 +15,6 @@
 		9BFC1182249270E800AECF6C /* PagedLists.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PagedLists.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BFC1185249270E800AECF6C /* PagedLists.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PagedLists.h; sourceTree = "<group>"; };
 		9BFC1186249270E800AECF6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9BFC118F249273CE00AECF6C /* PagedCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedCollectionView.swift; sourceTree = "<group>"; };
 		9BFC1190249273CE00AECF6C /* PagedTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedTableView.swift; sourceTree = "<group>"; };
 		9BFC119F2492902000AECF6C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9BFC11A124929F8500AECF6C /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -64,7 +62,6 @@
 		9BFC118E249273CE00AECF6C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				9BFC118F249273CE00AECF6C /* PagedCollectionView.swift */,
 				9BFC1190249273CE00AECF6C /* PagedTableView.swift */,
 			);
 			path = Sources;
@@ -149,7 +146,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BFC1191249273CE00AECF6C /* PagedCollectionView.swift in Sources */,
 				9BFC1192249273CE00AECF6C /* PagedTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
