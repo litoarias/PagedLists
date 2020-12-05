@@ -16,7 +16,7 @@ public protocol PagedTableViewDelegate: class {
   func tableView(
     _ tableView: PagedTableView,
     needsDataForPage page: Int,
-    completion: (_ elementsAdded: Int, _ error: NSError?) -> Void
+    completion: @escaping (_ elementsAdded: Int, _ error: NSError?) -> Void
   )
 }
 
