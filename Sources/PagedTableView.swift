@@ -14,6 +14,7 @@ public protocol PagedTableViewDelegate: class {
 	func tableView(_ tableView: PagedTableView, needsDataForPage page: Int, completion: @escaping (_ elementsAdded: Int, _ error: NSError?) -> Void)
 	func tableView(_ tableView: PagedTableView, didSelectRowAt indexPath: IndexPath)
 	func tableView(_ tableView: PagedTableView, viewForHeaderInSection section: Int) -> UIView?
+	func tableView(_ tableView: PagedTableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
 }
 
 public enum PagingDirectionType {
@@ -85,6 +86,10 @@ extension PagedTableView: UITableViewDelegate, UIScrollViewDelegate {
 	
 	public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 		return updateDelegate.tableView(self, viewForHeaderInSection: section)
+	}
+	
+	public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+		updateDelegate.tableView(self, willDisplay: cell, forRowAt: indexPath)
 	}
 	
 	public func scrollViewDidScroll(_ scrollView: UIScrollView) {
