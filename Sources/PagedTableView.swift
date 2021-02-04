@@ -13,6 +13,7 @@ import UIKit
 public protocol PagedTableViewDelegate: class {
 	func tableView(_ tableView: PagedTableView, needsDataForPage page: Int, completion: @escaping (_ elementsAdded: Int, _ error: NSError?) -> Void)
 	func tableView(_ tableView: PagedTableView, didSelectRowAt indexPath: IndexPath)
+	func tableView(_ tableView: PagedTableView, viewForHeaderInSection section: Int) -> UIView?
 }
 
 public enum PagingDirectionType {
@@ -82,6 +83,9 @@ extension PagedTableView: UITableViewDelegate, UIScrollViewDelegate {
 		updateDelegate.tableView(self, didSelectRowAt: indexPath)
 	}
 	
+	public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+		return updateDelegate.tableView(self, viewForHeaderInSection: section)
+	}
 	
 	public func scrollViewDidScroll(_ scrollView: UIScrollView) {
 		if direction == .atBottom {
